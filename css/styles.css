@@ -37,20 +37,46 @@
 }
 
 /* Base */
+* {
+  box-sizing: border-box;
+}
+
 body {
   color: var(--primary-dark-brown);
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 1.5;
+  margin: 0;
 }
 
 ul {
   list-style-type: none;
 }
 
+.section {
+  padding: 48px 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1288px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
 a {
   text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
 }
 
 address {
@@ -59,15 +85,16 @@ address {
 
 /* Button */
 .button {
-  width: 238px;
-  height: 59px;
   color: var(--primary-light);
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 600;
   background-color: var(--primary-light-green);
   border: 2px solid var(--primary-light-green);
   border-radius: 8px;
+  padding: 16px 32px;
   cursor: pointer;
+
 }
 
 .button:hover {
@@ -86,13 +113,19 @@ address {
 }
 
 /* hero section */
+.hero-section {
+  padding: 272px 0;
+}
+
 .hero-title {
   color: var(--primary-light);
   text-align: center;
   text-transform: uppercase;
   font-size: 128px;
   font-weight: 900;
+  line-height: 1.5;
   font-family: "Roboto", sans-serif;
+  margin-top: 0;
 }
 
 .hero-title .accent {
@@ -100,6 +133,15 @@ address {
 }
 
 /* Advantages section */
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .advantages-list {
   background-color: var(--primary-light-green);
   color: var(--primary-light);
@@ -121,6 +163,14 @@ address {
 }
 
 /* Traditions section */
+.traditions-section {
+  padding-top: 96px;
+}
+
+.traditions-title {
+  margin-bottom: 42px;
+}
+
 .traditions-text .brand {
   color: var(--primary-light-green);
   font-weight: 600;
@@ -134,13 +184,22 @@ address {
 
 /* chef-title */
 .chef-title {
+  margin-bottom: 16px;
   font-size: 40px;
   font-weight: 600;
 
 }
 
+.chefs-title {
+  margin-bottom: 80px;
+}
+
 /* formats-title */
 .formats-title {
+  margin-bottom: 80px;
+}
+
+.formats-article-title {
   font-size: 24px;
   font-weight: 600;
 }
@@ -148,6 +207,11 @@ address {
 .format-text {
   font-size: 14px;
   font-weight: 300;
+}
+
+/* contacts */
+.contacts-title {
+  margin-bottom: 16px;
 }
 
 /* footer */
