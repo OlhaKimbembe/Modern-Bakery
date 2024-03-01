@@ -51,6 +51,8 @@ body {
 }
 
 ul {
+  padding: 0;
+  margin: 0;
   list-style-type: none;
 }
 
@@ -109,7 +111,31 @@ address {
 
 .link:hover {
   color: var(--primary-light-green);
-  font-weight: 600;
+}
+
+/* header */
+header {
+  background-color: gray;
+}
+
+.header-flex-container {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-nav {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-menu {
+  display: flex;
+  gap: 64px;
+  flex-grow: 1;
+  justify-content: center;
 }
 
 /* hero section */
@@ -125,7 +151,7 @@ address {
   font-weight: 900;
   line-height: 1.5;
   font-family: "Roboto", sans-serif;
-  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .hero-title .accent {
@@ -142,9 +168,18 @@ address {
   overflow: hidden;
 }
 
-.advantages-list {
+.advantages-section {
   background-color: var(--primary-light-green);
   color: var(--primary-light);
+  display: flex;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.advantages-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
 }
 
 .advantages-item {
@@ -182,6 +217,20 @@ address {
   color: var(--primary-light-green);
 }
 
+.traditions-text.limited {
+  max-width: 340px;
+}
+
+.traditions-flex {
+  display: flex;
+  gap: 40px;
+  justify-content: space-between;
+}
+
+.traditions-content {
+  max-width: 640px;
+}
+
 /* chef-title */
 .chef-title {
   margin-bottom: 16px;
@@ -194,7 +243,7 @@ address {
   margin-bottom: 80px;
 }
 
-/* formats-title */
+/* formats */
 .formats-title {
   margin-bottom: 80px;
 }
@@ -207,6 +256,19 @@ address {
 .format-text {
   font-size: 14px;
   font-weight: 300;
+}
+
+.format-card {
+  border: 2px solid gray;
+  border-radius: 8px;
+  flex-basis: calc((100% - 40px) / 3);
+  padding: 24px;
+}
+
+.format-list {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 /* contacts */
