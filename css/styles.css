@@ -98,6 +98,7 @@ address {
   border-radius: 8px;
   padding: 16px 32px;
   cursor: pointer;
+  transition: background-color .3s, color .3s;
 
 }
 
@@ -109,6 +110,7 @@ address {
 /* link */
 .link {
   color: var(--primary-light);
+  transition: color .3s;
 }
 
 .link:hover {
@@ -117,7 +119,8 @@ address {
 
 /* header */
 header {
-  background-color: gray;
+  position: absolute;
+  width: 100%;
 }
 
 .header-flex-container {
@@ -143,7 +146,7 @@ header {
 /* hero section */
 .hero-section {
   padding: 272px 0;
-  background-image: url(../images/hero-section-back.jpg);
+  background-image: linear-gradient(102.76deg, rgba(18, 18, 17, 0.78) 2.03%, rgba(18, 18, 17, 0.6) 58.46%, rgba(18, 18, 17, 0) 90.36%), url(../images/hero-section-back.jpg);
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -251,16 +254,25 @@ header {
 
 .chefs-title {
   margin: 0 auto 80px;
-  max-width: 520px;
   text-align: center;
+  position: relative;
 }
 
 .chefs-title::before,
 .chefs-title::after {
+  position: absolute;
+  bottom: 8px;
   content: '';
-  display: block;
   width: 352px;
   border: 2px solid var(--secondary-light);
+}
+
+.chefs-title::before {
+  left: 0;
+}
+
+.chefs-title::after {
+  right: 0;
 }
 
 .chef-photo {
@@ -313,6 +325,11 @@ header {
   flex-basis: calc((100% - 40px) / 3);
   padding: 24px;
   background-image: linear-gradient(180deg, rgba(49, 38, 26, 0) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, var(--primary-dark-brown) 100%);
+  transition: transform .3s;
+}
+
+.format-card:hover {
+  transform: scale(1.03);
 }
 
 .format-list {
@@ -334,6 +351,11 @@ header {
   fill: var(--primary-dark-brown);
   cursor: pointer;
   flex-shrink: 0;
+  transition: background-color .3s, fill .3s;
+}
+
+.carousel-button.left {
+  transform: rotate(180deg);
 }
 
 .carousel-button:hover {
@@ -373,6 +395,23 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.footer::before {
+  content: url(../images/bread-one.png);
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+
+}
+
+.footer::after {
+  content: url(../images/bread-two.png);
+  position: absolute;
+  right: 0;
+  bottom: -8px;
 }
 
 .footer-container {
@@ -418,6 +457,7 @@ header {
   color: var(--primary-light);
   font-size: 16px;
   font-weight: 300;
+  transition: color .3s;
 }
 
 .address-link:hover {
@@ -431,4 +471,38 @@ header {
 .address-copyright {
   font-size: 14px;
   color: var(--secondary-light-brown);
+}
+
+/* modal */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity .3s, visibility .3s, pointer-events .3s;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  width: 880px;
+  height: 880px;
+  background-color: var(--primary-light);
+  border-radius: 32px;
+  position: relative;
+}
+
+.modal-btn-close {
+  position: absolute;
+  top: 48px;
+  right: 48px;
 }

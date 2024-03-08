@@ -43,7 +43,9 @@
               </li>
             </ul>
           </nav>
-          <button type="button" class="button">Замовити дзвінок</button>
+          <button type="button" class="button modal-btn-open">
+            Замовити дзвінок
+          </button>
         </div>
       </div>
     </header>
@@ -90,7 +92,8 @@
       <section class="section" id="chefs-section">
         <div class="container">
           <h2 class="chefs-title section-title">
-            Наші найкращі <span class="accent">шеф-кухарі</span>
+            Наші найкращі<br />
+            <span class="accent">шеф-кухарі</span>
           </h2>
           <ul class="chefs-list">
             <li class="chefs-item">
@@ -140,7 +143,7 @@
         <div class="container">
           <h2 class="formats-title section-title">Формати</h2>
           <div class="formats-container">
-            <button class="carousel-button" type="button">
+            <button class="carousel-button left" type="button">
               <svg width="16">
                 <use href="./images/icons.svg#arrow"></use>
               </svg>
@@ -285,5 +288,11 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden">
+      <div class="modal">
+        <button class="modal-btn-close">x</button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
