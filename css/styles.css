@@ -121,6 +121,7 @@ address {
 header {
   position: absolute;
   width: 100%;
+  margin-top: 32px;
 }
 
 .header-flex-container {
@@ -372,6 +373,11 @@ header {
   margin-bottom: 16px;
 }
 
+.contacts-text {
+  margin-bottom: 42px;
+  color: var(--secondary-dark-green);
+}
+
 .flex-container {
   display: flex;
   gap: 32px;
@@ -385,6 +391,16 @@ header {
   height: 595px;
   border-radius: 16px;
   border: none;
+}
+
+/* contacts-form */
+.contacts-form-field {
+  margin-bottom: 24px;
+}
+
+.contacts-btn {
+  margin: 0 auto 16px;
+  display: block;
 }
 
 /* footer */
@@ -475,6 +491,7 @@ header {
 
 /* modal */
 .backdrop {
+  padding: 36px;
   position: fixed;
   top: 0;
   left: 0;
@@ -494,15 +511,85 @@ header {
 }
 
 .modal {
-  width: 880px;
-  height: 880px;
+  width: 100%;
+  max-width: 880px;
+  height: 100%;
+  max-height: 880px;
   background-color: var(--primary-light);
   border-radius: 32px;
   position: relative;
+  padding: 128px;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.modal::-webkit-scrollbar {
+  display: none;
 }
 
 .modal-btn-close {
   position: absolute;
   top: 48px;
   right: 48px;
+}
+
+/* Form */
+.form-title {
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.form-text {
+  text-align: center;
+  color: var(--secondary-dark-green);
+  margin-bottom: 72px;
+}
+
+.form-field {
+  margin-bottom: 32px;
+
+}
+
+.form-input {
+  width: 100%;
+  padding: 16px 42px;
+  font-size: 16px;
+  line-height: 1.17;
+  border: 1px solid var(--secondary-light-brown);
+  border-radius: 8px;
+  background-color: transparent;
+  color: var(--primary-dark-brown);
+}
+
+.form-input::placeholder {
+  color: var(--secondary-light-brown);
+  font-size: 16px;
+  line-height: 1.17;
+}
+
+.form-input:focus::placeholder {
+  color: var(--primary-dark-brown);
+}
+
+.form-input:focus {
+  border-color: var(--primary-light-green);
+  outline: none;
+}
+
+.form-btn {
+  margin: 0 auto 24px;
+  display: block;
+}
+
+.form-terms {
+  font-size: 12px;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.form-terms a {
+  color: var(--primary-dark-brown);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
