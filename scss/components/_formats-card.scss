@@ -1,0 +1,46 @@
+.formats-card {
+  position: relative;
+  height: 444px;
+  color: var(--primary-light);
+  border-radius: 16px;
+  padding: 24px;
+  background-image: linear-gradient(180deg, rgba(49, 38, 26, 0) 55.21%, rgba(49, 38, 26, 0.71) 72.92%, var(--primary-dark-brown) 100%);
+  transition: transform .3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &__title {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
+
+    &__text {
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 300;
+  }
+
+  &__text-item {
+  margin-bottom: 0;
+  }
+
+  &:hover {
+    transform: scale(1.03);
+  }
+}
+
+
+
+
+

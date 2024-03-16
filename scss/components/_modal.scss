@@ -1,0 +1,63 @@
+.backdrop {
+  padding: 36px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity .3s, visibility .3s, pointer-events .3s;
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  width: 100%;
+  max-width: 880px;
+  height: 100%;
+  max-height: 880px;
+  background-color: var(--primary-light);
+  border-radius: 32px;
+  position: relative;
+  padding: 128px;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: 48px;
+    right: 48px;
+  }
+
+  &__title {
+    margin-bottom: 8px;
+    text-align: center;
+  }
+
+  &__text {
+    text-align: center;
+    color: var(--secondary-dark-green);
+    margin-bottom: 72px;
+  }
+
+  &__form-field {
+    margin-bottom: 32px;
+  }
+
+  &__btn {
+    margin: 0 auto 24px;
+    display: block;
+  }
+}
