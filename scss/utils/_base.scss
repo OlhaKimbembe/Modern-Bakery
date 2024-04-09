@@ -6,10 +6,15 @@ body {
   color: var(--primary-dark-brown);
   background-color: var(--primary-light);
   font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: 300;
   line-height: 1.5;
   margin: 0;
+
+  @media screen and (min-width: $bp-tablet) {
+      font-size: 18px;
+      font-weight: 400;
+    }
 }
 
 ul {
@@ -31,6 +36,12 @@ h5,
 h6,
 p {
   margin-top: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 address {

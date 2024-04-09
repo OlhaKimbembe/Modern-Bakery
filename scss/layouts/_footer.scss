@@ -1,0 +1,205 @@
+.footer {
+  text-align: center;
+  padding: 32px 0;
+  background-image: url(../images/footer-back-small.png);
+  background-color: var(--primary-dark-brown);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+
+  @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/footer-back-small@2x.png);
+  }
+
+  @media screen and (min-width: $bp-tablet) {
+    text-align: left;
+    background-image: url(../images/footer-back.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/footer-back@2x.png);
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+
+  &__nav,
+  &__address {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-basis: 50%;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 20px;
+    }
+  }
+
+  &__address {
+    gap: 8px;
+    @media screen and (min-width: $bp-tablet) {
+      gap: 20px;
+    }
+  }
+
+  &__item {
+    flex-grow: 1;
+  }
+
+  &__list-item:not(:last-child) {
+    margin-bottom: 18px;
+
+    @media screen and (min-width: $bp-tablet) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__list-icons {
+    display: flex;
+    flex-direction: row;
+    gap: 22px;
+  }
+
+  &__address-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media screen and (min-width: $bp-tablet) {
+      margin-left: 14px;
+      display: block;
+    }
+  }
+
+  &__icon {
+    fill: var(--primary-light);
+  }
+
+  &__address-privacy {
+    @media screen and (min-width: $bp-tablet) {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+
+  &__privacy {
+    margin-bottom: 8px;
+
+    @media screen and (min-width: $bp-tablet) {
+      margin-bottom: 16px;
+    }
+  }
+
+  &__address-copyright {
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--secondary-light-brown);
+    margin: 0;
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 14px;
+    }
+
+  }
+
+  &::before {
+    content: '';
+    background-image: url(../images/bread-one-small.png);
+    background-size: 100% 100%;
+    width: 85px;
+    height: 206px;
+    position: absolute;
+    bottom: 260px;
+    left: 0;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/bread-one-small@2x.png);
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+      content: '';
+      background-image: url(../images/bread-one.png);
+      background-size: 100% 100%;
+      width: 179px;
+      height: 121px;
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+
+      @media screen and (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/bread-one@2x.png);
+      }
+    }
+  }
+  
+  &::after {
+    content:'';
+    background-image: url(../images/bread-two-small.png);
+    background-size: 100% 100%;
+    width: 102px;
+    height: 91px;
+    position: absolute;
+    right: 0;
+    bottom: 0px;
+
+    @media screen and (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: url(../images/bread-two-small@2x.png);
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+      content: '';
+      background-image: url(../images/bread-two.png);
+      background-size: 100% 100%;
+      width: 378px;
+      height: 187px;
+      position: absolute;
+      right: 0;
+      bottom: 0px;
+
+      @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/bread-two@2x.png);
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

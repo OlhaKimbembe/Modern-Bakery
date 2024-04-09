@@ -1,0 +1,7 @@
+.logo {
+  width: 72px;
+
+  @media screen and (min-width: $bp-tablet) {
+    width: 114px;
+  }
+}

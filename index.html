@@ -11,6 +11,10 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="./css/main.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <header class="header">
@@ -18,7 +22,11 @@
         <div class="header__flex-container">
           <nav class="header__nav">
             <a href="./index.html">
-              <img src="./images/logo.svg" alt="логотип сучасної пекарні" />
+              <img
+                class="logo"
+                src="./images/logo.svg"
+                alt="логотип сучасної пекарні"
+              />
             </a>
             <ul class="header__menu">
               <li>
@@ -43,9 +51,64 @@
               </li>
             </ul>
           </nav>
-          <button type="button" class="button modal-btn-open">
+          <button type="button" class="header__btn button modal-btn-open">
             Замовити дзвінок
           </button>
+          <button type="button" class="header__burger menu-btn-open">
+            <svg width="24" height="24">
+              <use href="./images/icons.svg#burger-menu"></use>
+            </svg>
+          </button>
+          <div class="mobile-menu">
+            <button type="button" class="mobile-menu__btn menu-btn-close">
+              <svg width="12" height="12">
+                <use href="./images/icons.svg#close-btn"></use>
+              </svg>
+            </button>
+            <nav class="mobile-menu__nav">
+              <a href="./index.html">
+                <img
+                  class="mobile-menu__logo logo"
+                  src="./images/logo-dark.svg"
+                  alt="логотип сучасної пекарні"
+                />
+              </a>
+              <ul class="mobile-menu__menu">
+                <li>
+                  <a
+                    class="link mobile-menu__link"
+                    href="#traditions-section"
+                    target="_blank"
+                    >Наші традиції</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="link mobile-menu__link"
+                    href="#chefs-section"
+                    target="_blank"
+                    >Шеф-кухарі</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="link mobile-menu__link"
+                    href="#formats-section"
+                    target="_blank"
+                    >Формати</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="link mobile-menu__link"
+                    href="#contacts-section"
+                    target="_blank"
+                    >Контакти</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
         </div>
       </div>
     </header>
@@ -54,6 +117,9 @@
         <h1 class="hero-section__title">
           <span class="text-brand">Сучасна</span> пекарня
         </h1>
+        <button type="button" class="hero-section__btn button modal-btn-open">
+          Замовити дзвінок
+        </button>
       </section>
       <section class="advantages-section">
         <div class="container">
@@ -96,6 +162,10 @@
             </div>
             <img
               class="traditions-section__photo"
+              srcset="
+                ./images/smiling_baker_man.jpg    1x,
+                ./images/smiling_baker_man@2x.jpg 2x
+              "
               src="./images/smiling_baker_man.jpg"
               alt="щасливий пекар який штовхає підніс зі свіжим хлібом"
             />
@@ -116,18 +186,20 @@
                 <img
                   class="chef-card__photo"
                   src="images/Nastya-chef.jpg"
+                  srcset="
+                    ./images/Nastya-chef.jpg    1x,
+                    ./images/Nastya-chef@2x.jpg 2x
+                  "
                   alt="фото шеф-кухаря насті"
                 />
                 <div>
                   <h3 class="chef-card__title">Настя</h3>
                   <p class="chef-card__text">Привіт, я Настя!</p>
-                  <p class="chef-card__text">
-                    Вже 10 років, я втілюю<br />
-                    у життя цікаві та смачні ідеї.
+                  <p class="chef-card__text chef-card__text--limited">
+                    Вже 10 років, я втілюю у життя цікаві та смачні ідеї.
                   </p>
-                  <p class="chef-card__text">
-                    Я випічу для вас<br />
-                    найсмачніщі вироби!
+                  <p class="chef-card__text chef-card__text--limited">
+                    Я випічу для вас найсмачніщі вироби!
                   </p>
                 </div>
               </article>
@@ -137,6 +209,10 @@
                 <img
                   class="chef-card__photo"
                   src="images/Vlad-chef.jpg"
+                  srcset="
+                    ./images/Vlad-chef.jpg    1x,
+                    ./images/Vlad-chef@2x.jpg 2x
+                  "
                   alt="фото шеф-кухаря влада"
                 />
                 <div>
@@ -163,78 +239,177 @@
           >
             Формати
           </h2>
-          <div class="formats-section__container">
-            <button class="carousel-button carousel-button--left" type="button">
+          <div class="formats-section__slider">
+            <button
+              class="formats-section__button carousel-button prev carousel-button--left"
+              type="button"
+            >
               <svg width="16">
                 <use href="./images/icons.svg#arrow"></use>
               </svg>
             </button>
-            <ul class="formats-section__list">
-              <li class="formats-section__item">
-                <article class="formats-card">
-                  <img
-                    class="formats-card__image"
-                    src="./images/warlus.jpg"
-                    alt="Walrus format"
-                  />
-                  <h3 class="formats-card__title" lang="en">Walrus</h3>
-                  <div class="formats-card__text">
-                    <p class="formats-card__text-item">Площа: до 120 м2</p>
-                    <p class="formats-card__text-item">Меню: розширене меню</p>
-                    <p class="formats-card__text-item">
-                      Штат: 2 продавці-касири, 2 пекарі, 2 помічники пекаря, 2
-                      офіціанти-різнороби
-                    </p>
-                    <p class="formats-card__text-item">Посадкові місця: є</p>
-                  </div>
-                </article>
-              </li>
-              <li class="formats-section__item">
-                <article class="formats-card">
-                  <img
-                    class="formats-card__image"
-                    src="./images/horseshoe.jpg"
-                    alt="Horseshoe format"
-                  />
-                  <h3 class="formats-card__title" lang="en">Horseshoe</h3>
-                  <div class="formats-card__text">
-                    <p class="formats-card__text-item">Площа: до 25 м2</p>
-                    <p class="formats-card__text-item">
-                      Меню: найпопулярніші позиції меню
-                    </p>
-                    <p class="formats-card__text-item">
-                      Штат: 2 продавці-касири, 2 пекарі, 1 помічник пекаря
-                    </p>
-                    <p class="formats-card__text-item">
-                      Посадкові місця: відсутні
-                    </p>
-                  </div>
-                </article>
-              </li>
-              <li class="formats-section__item">
-                <article class="formats-card">
-                  <img
-                    class="formats-card__image"
-                    src="./images/handlebar.jpg"
-                    alt="handlebar format"
-                  />
-                  <h3 class="formats-card__title" lang="en">Handlebar</h3>
-                  <div class="formats-card__text">
-                    <p class="formats-card__text-item">Площа: до 15 м2</p>
-                    <p class="formats-card__text-item">
-                      Меню: найпопулярніші позиції меню
-                    </p>
-                    <p class="formats-card__text-item">
-                      Штат: 1 продавець, 1 пекар, 1 помічник пекаря
-                    </p>
-                    <p class="formats-card__text-item">
-                      Посадкові місця: відсутні
-                    </p>
-                  </div>
-                </article>
-              </li>
-            </ul>
-            <button class="carousel-button" type="button">
+            <div class="formats-section__container swiper-container">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <article class="formats-card">
+                    <img
+                      class="formats-card__image"
+                      src="./images/warlus.jpg"
+                      srcset="./images/warlus.jpg 1x, ./images/warlus@2x.jpg 2x"
+                      alt="Walrus format"
+                    />
+                    <h3 class="formats-card__title" lang="en">Walrus</h3>
+                    <div class="formats-card__text">
+                      <p class="formats-card__text-item">Площа: до 120 м2</p>
+                      <p class="formats-card__text-item">
+                        Меню: розширене меню
+                      </p>
+                      <p class="formats-card__text-item">
+                        Штат: 2 продавці-касири, 2 пекарі, 2 помічники пекаря, 2
+                        офіціанти-різнороби
+                      </p>
+                      <p class="formats-card__text-item">Посадкові місця: є</p>
+                    </div>
+                  </article>
+                </li>
+                <li class="swiper-slide">
+                  <article class="formats-card">
+                    <img
+                      class="formats-card__image"
+                      src="./images/horseshoe.jpg"
+                      srcset="
+                        ./images/horseshoe.jpg    1x,
+                        ./images/horseshoe@2x.jpg 2x
+                      "
+                      alt="Horseshoe format"
+                    />
+                    <h3 class="formats-card__title" lang="en">Horseshoe</h3>
+                    <div class="formats-card__text">
+                      <p class="formats-card__text-item">Площа: до 25 м2</p>
+                      <p class="formats-card__text-item">
+                        Меню: найпопулярніші позиції меню
+                      </p>
+                      <p class="formats-card__text-item">
+                        Штат: 2 продавці-касири, 2 пекарі, 1 помічник пекаря
+                      </p>
+                      <p class="formats-card__text-item">
+                        Посадкові місця: відсутні
+                      </p>
+                    </div>
+                  </article>
+                </li>
+                <li class="swiper-slide">
+                  <article class="formats-card">
+                    <img
+                      class="formats-card__image"
+                      src="./images/handlebar.jpg"
+                      srcset="
+                        ./images/handlebar.jpg    1x,
+                        ./images/handlebar@2x.jpg 2x
+                      "
+                      alt="handlebar format"
+                    />
+                    <h3 class="formats-card__title" lang="en">Handlebar</h3>
+                    <div class="formats-card__text">
+                      <p class="formats-card__text-item">Площа: до 15 м2</p>
+                      <p class="formats-card__text-item">
+                        Меню: найпопулярніші позиції меню
+                      </p>
+                      <p class="formats-card__text-item">
+                        Штат: 1 продавець, 1 пекар, 1 помічник пекаря
+                      </p>
+                      <p class="formats-card__text-item">
+                        Посадкові місця: відсутні
+                      </p>
+                    </div>
+                  </article>
+                </li>
+                <li class="swiper-slide">
+                  <article class="formats-card">
+                    <img
+                      class="formats-card__image"
+                      src="./images/warlus.jpg"
+                      srcset="./images/warlus.jpg 1x, ./images/warlus@2x.jpg 2x"
+                      alt="Walrus format"
+                    />
+                    <h3 class="formats-card__title" lang="en">Walrus</h3>
+                    <div class="formats-card__text">
+                      <p class="formats-card__text-item">Площа: до 120 м2</p>
+                      <p class="formats-card__text-item">
+                        Меню: розширене меню
+                      </p>
+                      <p class="formats-card__text-item">
+                        Штат: 2 продавці-касири, 2 пекарі, 2 помічники пекаря, 2
+                        офіціанти-різнороби
+                      </p>
+                      <p class="formats-card__text-item">Посадкові місця: є</p>
+                    </div>
+                  </article>
+                </li>
+                <li class="swiper-slide">
+                  <article class="formats-card">
+                    <img
+                      class="formats-card__image"
+                      src="./images/horseshoe.jpg"
+                      srcset="
+                        ./images/horseshoe.jpg    1x,
+                        ./images/horseshoe@2x.jpg 2x
+                      "
+                      alt="Horseshoe format"
+                    />
+                    <h3 class="formats-card__title" lang="en">Horseshoe</h3>
+                    <div class="formats-card__text">
+                      <p class="formats-card__text-item">Площа: до 25 м2</p>
+                      <p class="formats-card__text-item">
+                        Меню: найпопулярніші позиції меню
+                      </p>
+                      <p class="formats-card__text-item">
+                        Штат: 2 продавці-касири, 2 пекарі, 1 помічник пекаря
+                      </p>
+                      <p class="formats-card__text-item">
+                        Посадкові місця: відсутні
+                      </p>
+                    </div>
+                  </article>
+                </li>
+                <li class="swiper-slide">
+                  <article class="formats-card">
+                    <img
+                      class="formats-card__image"
+                      src="./images/handlebar.jpg"
+                      srcset="
+                        ./images/handlebar.jpg    1x,
+                        ./images/handlebar@2x.jpg 2x
+                      "
+                      alt="handlebar format"
+                    />
+                    <h3 class="formats-card__title" lang="en">Handlebar</h3>
+                    <div class="formats-card__text">
+                      <p class="formats-card__text-item">Площа: до 15 м2</p>
+                      <p class="formats-card__text-item">
+                        Меню: найпопулярніші позиції меню
+                      </p>
+                      <p class="formats-card__text-item">
+                        Штат: 1 продавець, 1 пекар, 1 помічник пекаря
+                      </p>
+                      <p class="formats-card__text-item">
+                        Посадкові місця: відсутні
+                      </p>
+                    </div>
+                  </article>
+                </li>
+              </ul>
+              <div class="pagination">
+                <span class="pagination__button"></span>
+                <span class="pagination__button"></span>
+                <span class="pagination__button"></span>
+                <span class="pagination__button"></span>
+              </div>
+            </div>
+            <button
+              class="formats-section__button carousel-button next"
+              type="button"
+            >
               <svg width="16" height="16">
                 <use href="./images/icons.svg#arrow"></use>
               </svg>
@@ -303,10 +478,12 @@
                 </p>
               </form>
             </div>
-            <iframe
-              class="contacts-section__item contacts-section__map"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.164054656813!2d30.48865857655763!3d50.456669671593325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637bfe1717%3A0x5370c2254ad1b952!2sSichovykh%20Striltsiv%20St%2C%2054%2C%20Kyiv%2C%2002000!5e0!3m2!1sen!2sua!4v1708072280678!5m2!1sen!2sua"
-            ></iframe>
+            <div class="contacts-section__item contacts-section__map-wrap">
+              <iframe
+                class="contacts-section__map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2540.164054656813!2d30.48865857655763!3d50.456669671593325!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4ce637bfe1717%3A0x5370c2254ad1b952!2sSichovykh%20Striltsiv%20St%2C%2054%2C%20Kyiv%2C%2002000!5e0!3m2!1sen!2sua!4v1708072280678!5m2!1sen!2sua"
+              ></iframe>
+            </div>
           </div>
         </div>
       </section>
@@ -317,7 +494,11 @@
           <nav class="footer__nav">
             <div class="footer__item">
               <a href="/">
-                <img src="./images/logo.svg" alt="логотип сучасної пекарні" />
+                <img
+                  src="./images/logo.svg"
+                  class="logo"
+                  alt="логотип сучасної пекарні"
+                />
               </a>
             </div>
             <ul class="footer__item footer__nav-list">
@@ -362,14 +543,12 @@
                   вул. Січових Стрільців 54</a
                 >
               </li>
-              <li class="footer__list-item">
+              <li class="footer__list-item footer__list-icons">
                 <a href="#">
                   <svg class="footer__icon" width="32" height="32">
                     <use href="./images/icons.svg#facebook"></use>
                   </svg>
                 </a>
-              </li>
-              <li class="footer__list-item">
                 <a href="#">
                   <svg class="footer__icon" width="32" height="32">
                     <use href="./images/icons.svg#insta"></use>
@@ -393,7 +572,11 @@
     </footer>
     <div class="backdrop is-hidden">
       <div class="modal">
-        <button class="modal__btn-close modal-btn-close">x</button>
+        <button type="button" class="modal__btn-close modal-btn-close">
+          <svg width="16" height="16">
+            <use href="./images/icons.svg#close-btn"></use>
+          </svg>
+        </button>
         <h2 class="section__title modal__title">Замовити дзвінок</h2>
         <p class="modal__text">
           Залишіть заявку та наш спеціаліст зв'яжеться з Вами!
@@ -453,6 +636,9 @@
         </form>
       </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./js/formats-slider.js"></script>
+    <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>

@@ -1,19 +1,29 @@
 .link {
+  font-size: 14px;
   color: var(--primary-light);
   transition: color .3s;
 
   &:hover {
       color: var(--primary-light-green);
     }
+
+  @media screen and (min-width: $bp-tablet) {
+    font-size: 18px;
+    font-weight: 400;
+  }
 }
 
 .address-link {
   color: var(--primary-light);
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 300;
   transition: color .3s;
 
   &:hover {
     color: var(--primary-light-green);
+  }
+
+  @media screen and (min-width: $bp-tablet) {
+    font-size: 16px;
   }
 }

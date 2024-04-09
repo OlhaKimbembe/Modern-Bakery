@@ -1,13 +1,11 @@
 .input {
   &__window {
     width: 100%;
-    padding: 16px 42px;
-    font-size: 16px;
-    line-height: 1.17;
+    padding: 8px 24px;
     border: 1px solid var(--secondary-light-brown);
     border-radius: 8px;
     background-color: transparent;
-    color: var(--primary-dark-brown);
+    // color: var(--primary-dark-brown);
 
     &:focus::placeholder {
       color: var(--primary-dark-brown);
@@ -17,11 +15,22 @@
       border-color: var(--primary-light-green);
       outline: none;
     }
+
+    &::placeholder {
+      color: var(--secondary-light-brown);
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.17;
+    
+      @media screen and (min-width: $bp-tablet) {
+        font-size: 18px;
+        font-weight: 400;
+      }
+    }
+
+    @media screen and (min-width: $bp-tablet) {
+      padding: 16px 42px;
+    }
   }
 
-  &::placeholder {
-    color: var(--secondary-light-brown);
-    font-size: 16px;
-    line-height: 1.17;
-  }
 }

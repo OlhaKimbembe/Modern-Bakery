@@ -1,0 +1,59 @@
+.mobile-menu {
+  padding: 16px 24px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--primary-light);
+  transform: translateX(100%);
+  transition: transform .3s;
+  z-index: 2;
+
+  &.is-open {
+    transform: translateX(0);
+  }
+
+  &__btn {
+    position: absolute;
+    top: 16px;
+    right: 24px;
+    background-color: transparent;
+    border: none;
+    padding: 0;
+  }
+
+  // &__nav {
+  //   display: flex;
+  //   flex-direction: column;
+  //   gap: 24px;
+  // }
+
+  &__menu {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 16px;
+  }
+
+  &__link {
+    color: var(--primary-dark-brown);
+  }
+
+  &::after {
+    content:'';
+    background-image: url(../images/bread-mobile-menu.png);
+    background-size: 100% 100%;
+    height: 240px;
+    width: 180px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    @media screen and (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/bread-mobile-menu@2x.png);
+      }
+  }
+}

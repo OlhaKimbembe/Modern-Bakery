@@ -2,10 +2,15 @@
   font-size: 12px;
   line-height: 1.5;
   text-align: center;
+  display: none;
 
   &__link {
     color: var(--primary-dark-brown);
     text-decoration: underline;
     text-underline-offset: 3px;
+  }
+
+  @media screen and (min-width: $bp-tablet) {
+    display: block;
   }
 }

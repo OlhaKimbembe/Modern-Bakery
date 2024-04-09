@@ -1,0 +1,91 @@
+.contacts-section {
+  padding-bottom: 0;
+
+    @media screen and (min-width: $bp-tablet) {
+      padding-bottom: 96px;
+    }
+
+  &__flex-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+
+    @media screen and (min-width: $bp-tablet) {
+      flex-direction: row;
+      gap: 32px;
+    }
+  }
+
+  &__item {
+    @media screen and (min-width: $bp-tablet) {
+      flex-basis: calc((100% - 32px) / 2);
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 8px;
+
+    @media screen and (min-width: $bp-tablet) {
+      margin-bottom: 16px;
+      text-align: start;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 24px;
+    color: var(--secondary-dark-green);
+
+    @media screen and (min-width: $bp-tablet) {
+      font-size: 18px;
+      margin-bottom: 42px;
+      text-align: start;
+    }
+  }
+
+  &__map-wrap {
+    height: 176px;
+    margin: 0 -24px;
+
+    @media screen and (min-width: $bp-tablet) {
+      margin: 0;
+    }
+  }
+
+  &__map {
+    height: 100%;
+    width: 100%;
+    border: none;
+
+    @media screen and (min-width: $bp-tablet) {
+      height: 595px;
+      border-radius: 16px;
+      border: none;
+    }
+  }
+
+  &__form-field {
+    margin-bottom: 16px;
+
+    @media screen and (min-width: $bp-tablet) {
+    margin-bottom: 24px;
+    }
+  }
+
+  &__btn {
+    margin: 0 auto;
+    display: block;
+
+    @media screen and (min-width: $bp-tablet) {
+      margin: 0 auto 16px;
+    }
+
+  }
+}
+
+
+
+
+
